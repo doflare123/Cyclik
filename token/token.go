@@ -17,6 +17,7 @@ const (
 	STRING_LITERAL = "STRING_LITERAL"
 	BOOL_LITERAL   = "BOOL_LITERAL"
 
+	//всякие знаки
 	ASSIGN = "="
 	PLUS   = "+"
 	MINUS  = "-"
@@ -31,10 +32,18 @@ const (
 	LBRACE = "{"
 	RBRACE = "}"
 
-	FUNCTION = "FUNCTION"
-	INT      = "INT"
-	FLOAT    = "FLOAT"
-	STRING   = "STRING"
-	BOOL     = "BOOL"
-	ENTER    = "ENTER"
+	// ключевые слова
+	FUNCTION    = "FUNCTION"
+	RETURN      = "RETURN"
+	INT_TYPE    = "INT"
+	FLOAT_TYPE  = "FLOAT"
+	STRING_TYPE = "STRING"
+	BOOL_TYPE   = "BOOL"
+	ENTER       = "ENTER"
+	PRINT       = "PRINT"
+
+	TRUE  = "TRUE"
+	FALSE = "FALSE"
+
+	COMMENT = "COMMENT"
 )

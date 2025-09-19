@@ -12,9 +12,10 @@ var keywords = map[string]token.TokenType{
 	"true":    token.TRUE,
 	"false":   token.FALSE,
 	"CD":      token.PRINT,
+	"F":       token.FUNCTION,
 }
 
-func lookIndent(ident string) token.TokenType {
+func LookIndent(ident string) token.TokenType {
 	if tok, ok := keywords[ident]; ok {
 		return tok
 	}

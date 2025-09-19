@@ -61,7 +61,7 @@ func (lex *Lexer) NextToken() token.Token {
 	default:
 		if isLetter(lex.ch) {
 			lit := lex.readIdentifier()
-			typLit := lookIndent(lit)
+			typLit := LookIndent(lit)
 			return token.Token{Type: typLit, Literal: lit}
 		} else if isDigit(lex.ch) {
 			tok = token.Token{Type: token.INT_LITERAL, Literal: lex.readNumber()}
@@ -75,7 +75,7 @@ func (lex *Lexer) NextToken() token.Token {
 }
 
 func (lex *Lexer) skipWhiteSpace() {
-	if lex.ch == ' ' || lex.ch == '\t' || lex.ch == '\n' || lex.ch == '\r' {
+	for lex.ch == ' ' || lex.ch == '\t' || lex.ch == '\n' || lex.ch == '\r' {
 		lex.readChar()
 	}
 }
